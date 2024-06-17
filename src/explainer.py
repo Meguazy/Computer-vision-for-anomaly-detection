@@ -4,9 +4,7 @@ import numpy as np
 import torch
 import torchvision.transforms as transforms
 
-from captum.attr import IntegratedGradients
 from captum.attr import GradientShap
-from matplotlib.colors import LinearSegmentedColormap
 from model_class import CustomCNN
 from PIL import Image
 
