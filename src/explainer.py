@@ -24,6 +24,7 @@ state_dict = torch.load('./model/cnn_18.pth')
 # Load the state dictionary into the model
 model.load_state_dict(state_dict)
 
+
 def explain_model(img_path: str, model: CustomCNN, tr_transf: transforms.Compose):
     idx_to_labels = {1: ('ok_front'), 0: ('def_front')}
     img = Image.open(img_path)
