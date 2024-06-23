@@ -45,10 +45,10 @@ class CustomCNN(nn.Module):
         torch.set_printoptions(sci_mode=False)
         correct = 0
         total = 0
-        running_loss = 0.0
-        model.eval()
+        running_loss = 0.0        
         counter = 0
         running_f1_score = 0
+        model.eval()
         with torch.no_grad():
             for _, data in enumerate(loader):
                 inputs, labels = data

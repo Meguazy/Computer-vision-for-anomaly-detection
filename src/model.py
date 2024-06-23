@@ -40,11 +40,11 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 early_stopper = EarlyStopper(patience=3, min_delta=0)
 
+model.train()
 for epoch in range(num_epochs):
     loop = tqdm(enumerate(train_loader),total=len(train_loader))
     loss = 0
     correct = 0
-    model.train()
     for batch_idx, (data, targets) in loop:
         # backward
         optimizer.zero_grad()
